@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>F1 進站預測系統</title>
+</head>
+
+<body>
+    <h1>F1 賽車資料輸入</h1>
+    <form action="/submit" method="post" enctype="multipart/form-data">
+        <label for="TyreLife">輪胎壽命 (TyreLife)</label>
+        <input type="number" step="any" id="TyreLife" name="TyreLife" value="{{TyreLife}}" required><br><br>
+        
+        <label for="Stint">第幾段賽程 (Stint)</label>
+        <input type="number" step="any" id="Stint" name="Stint" value="{{Stint}}" required><br><br>
+        
+        <label for="LapNumber">目前圈數 (LapNumber)</label>
+        <input type="number" step="any" id="LapNumber" name="LapNumber" value="{{LapNumber}}" required><br><br>
+        
+        <label for="Position">目前排名 (Position)</label>
+        <input type="number" step="any" id="Position" name="Position" value="{{Position}}" required><br><br>
+        
+        <label for="Laps_Since_LastPit">距離上次進站圈數 (Laps_Since_LastPit)</label>
+        <input type="number" step="any" id="Laps_Since_LastPit" name="Laps_Since_LastPit" value="{{Laps_Since_LastPit}}" required><br><br>
+        
+        <input type="submit" value="submit">
+    </form>
+    <br>
+    <div>
+        <p>評估結果 : {{prediction}}</p>
+    </div>
+</body>
+
+</html>
